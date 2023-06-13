@@ -66,7 +66,7 @@ st.image(image, caption='Courbe ROC')
 
 df=user_input()
 
-st.subheader("Voici les caractéristiques de l'individu : ")
+st.subheader("Voici les caractéristiques choisis de l'individu : ")
 
 st.dataframe(df.transpose())
 
