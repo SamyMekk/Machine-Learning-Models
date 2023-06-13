@@ -55,18 +55,19 @@ def user_input():
 st.header("Voici les résultats de la matrice de confusion :")
 
 
-url_icon = "https://raw.githubusercontent.com/SamyMekk/Machine-Learning-Models/main/HeartDiseasePrediction/MatrixConfusion.png"
-response = requests.get(url_icon)
-img = Image.open(BytesIO(response.content))
+url_matrix_confusion = "https://raw.githubusercontent.com/SamyMekk/Machine-Learning-Models/main/HeartDiseasePrediction/data/MatrixConfusion.png"
+response = requests.get(url_matrix_confusion)
+img_matrix_confusion = Image.open(BytesIO(response.content))
 
-st.image(img, caption='Confusion Matrix')
+st.image(img_matrix_confusion, caption='Confusion Matrix')
 
 
 st.header("Voici les résultats pour la courbe ROC :")
 
-image = Image.open("ROCCurve.png")
-
-st.image(image, caption='Courbe ROC')
+url_roc_curve = "https://raw.githubusercontent.com/SamyMekk/Machine-Learning-Models/main/HeartDiseasePrediction/data/ROCCurve.png"
+response = requests.get(url_roc_curve)
+img_roc_curve = Image.open(BytesIO(response.content))
+st.image(img_roc_curve,caption="Courbe ROC")
 # Modèle Prédiction
 
 
