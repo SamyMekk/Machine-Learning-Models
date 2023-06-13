@@ -73,9 +73,9 @@ st.image(img_roc_curve,caption="Courbe ROC")
 
 df=user_input()
 
-st.subheader("Voici les caractéristiques choisis de l'individu : ")
+# st.subheader("Voici les caractéristiques choisis de l'individu : ")
 
-st.dataframe(df.transpose())
+# st.dataframe(df.transpose())
 
 DataforCalcul=DataTest.iloc[0:,0:len(DataTest.transpose())-1]
 
