@@ -7,6 +7,8 @@ Created on Mon Jun 12 15:36:10 2023
 
 
 import streamlit as st
+import requests
+from io import BytesIO
 import pandas as pd
 from RegressionLogistique import *
 from PIL import Image
@@ -51,9 +53,13 @@ def user_input():
 
 
 st.header("Voici les résultats de la matrice de confusion :")
-image = Image.open("MatrixConfusion.png")
 
-st.image(image, caption='Confusion Matrix')
+
+url_icon = "https://raw.githubusercontent.com/SamyMekk/Machine-Learning-Models/main/HeartDiseasePrediction/MatrixConfusion.png"
+response = requests.get(url_icon)
+img = Image.open(BytesIO(response.content))
+
+st.image(img, caption='Confusion Matrix')
 
 
 st.header("Voici les résultats pour la courbe ROC :")
