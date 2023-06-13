@@ -18,6 +18,7 @@ st.title("Modèle de Régression Logistique pour la prédiction de Heart Disease
 
 st.header("Voici à quoi ressemble les Données sur lesquels notre étude va se baser ")
 
+st.write(Data)
 
 
 def user_input():
