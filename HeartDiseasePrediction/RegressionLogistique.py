@@ -126,13 +126,13 @@ classifier = LogisticRegression(random_state = 0, penalty = 'none')
 classifier.fit(X_train, y_train)
 
 y_pred = classifier.predict(X_train)
-accuracy_score(y_train, y_pred)
+# accuracy_score(y_train, y_pred)
 
 # Matrice de Confusion
 
-ConfusionMatrixDisplay.from_estimator(classifier,X_test,y_test)
+# ConfusionMatrixDisplay.from_estimator(classifier,X_test,y_test)
 
 
 # Plot Courbe ROC
 
-RocCurveDisplay.from_estimator(classifier,X_test,y_test)
+# RocCurveDisplay.from_estimator(classifier,X_test,y_test)
