@@ -90,5 +90,5 @@ Candidat=pd.DataFrame(Input.iloc[-1,:]).transpose()
 st.header("Résultat de la prédiction par régression logistique : ")
 Prediction={"Prédiction":[np.round(classifier.predict_proba(Candidat)[0][0],4)]}
 Resultat=pd.DataFrame.from_dict(data=Prediction)
-Resultat.index=["Probabilité de ne pas subir d'attaque cardiaque :"]
+Resultat.index=["Proba pas d'attaque cardiaque :"]
 st.dataframe(Resultat)
