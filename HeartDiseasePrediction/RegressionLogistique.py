@@ -18,7 +18,7 @@ import matplotlib.pyplot as plt
 
 # Traitement des Données
 
-Dataset=pd.read_csv(r"C:\Users\samym\OneDrive - GENES\Bureau\Machine Learning Models\LogisticRegression\data\Cleveland.csv",index_col=0)
+Dataset=pd.read_csv("data/Cleveland.csv",index_col=0)
 Dataset.columns=["Age","Sexe","cp","trestbps","chol","fbs","restecg","thalach","exang","oldpeak","slope","ca","thal","target"]
 Data=Dataset.replace('?', np.NaN).copy()
 Data["thal"]=Data["thal"].astype("float64")
