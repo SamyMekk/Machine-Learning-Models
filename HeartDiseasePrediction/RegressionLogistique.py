@@ -18,7 +18,7 @@ import matplotlib.pyplot as plt
 
 # Traitement des Données
 
-Dataset=pd.read_csv("data/Cleveland.csv",index_col=0)
+Dataset=pd.read_csv("https://raw.githubusercontent.com/SamyMekk/Machine-Learning-Models/main/HeartDiseasePrediction/data/Cleveland.csv",index_col=0)
 Dataset.columns=["Age","Sexe","cp","trestbps","chol","fbs","restecg","thalach","exang","oldpeak","slope","ca","thal","target"]
 Data=Dataset.replace('?', np.NaN).copy()
 Data["thal"]=Data["thal"].astype("float64")
@@ -116,7 +116,7 @@ Data["thal"]=Data["thal"].apply(thal)
 
 
 DataTest=Data.copy()
-# DataTest
+# DataTest 
 
 DataClean = pd.get_dummies(DataTest, columns=['Sexe',"cp","fbs","restecg","exang","slope","ca","thal","target"], drop_first=True)
 X=DataClean.drop(columns=['target_Oui'])
@@ -126,7 +126,7 @@ classifier = LogisticRegression(random_state = 0, penalty = 'none')
 classifier.fit(X_train, y_train)
 
 y_pred = classifier.predict(X_train)
-# accuracy_score(y_train, y_pred)
+# accuracy_score(y_train, y_pred) Calcul de l'accuracy
 
 # Matrice de Confusion
 
