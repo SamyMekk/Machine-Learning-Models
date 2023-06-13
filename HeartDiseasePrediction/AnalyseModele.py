@@ -51,14 +51,14 @@ def user_input():
 
 
 st.header("Voici les résultats de la matrice de confusion :")
-image = Image.open(r'C:\Users\samym\OneDrive - GENES\Bureau\Machine Learning Models\LogisticRegression\data\MatrixConfusion.png')
+image = Image.open("data/MatrixConfusion.png")
 
 st.image(image, caption='Confusion Matrix')
 
 
 st.header("Voici les résultats pour la courbe ROC :")
 
-image = Image.open(r'C:\Users\samym\OneDrive - GENES\Bureau\Machine Learning Models\LogisticRegression\data\ROCCurve.png')
+image = Image.open("data/ROCCurve.png")
 
 st.image(image, caption='Courbe ROC')
 # Modèle Prédiction
