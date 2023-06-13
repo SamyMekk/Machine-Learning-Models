@@ -8,8 +8,6 @@ Created on Mon Jun 12 15:36:10 2023
 
 import streamlit as st
 import pandas as pd
-import os
-os.chdir(r"C:\Users\samym\OneDrive - GENES\Bureau\Machine Learning Models\LogisticRegression")
 from RegressionLogistique import *
 from PIL import Image
 
